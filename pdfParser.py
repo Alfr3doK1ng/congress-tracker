@@ -1,9 +1,11 @@
-from pypdf import *
 from io import StringIO, BytesIO
 from urllib import *
-from requests import *
+import requests
+from numpy import *
+from pandas import *
+from PyPDF2 import PdfReader
 
-filename = "2024FD.txt"
+filename = "2024FD_Alex.txt"
 docID = []
 urls = []
 
@@ -20,17 +22,21 @@ for i in lines:
     urls.append(url)
     count += 1
 
-writer = StringIO.PdfFileWriter()
-
 for url in urls:
-    remoteFile = StringIO.urlopen(Request(url)).read()
-    memoryFile = StringIO(remoteFile)
-    pdfFile = StringIO.PdfFileReader(memoryFile)
+   try:
+       response = requests.get(url)
+       response.raise_for_status()
+   except requests.exceptions.RequestException as e:
+       print(f"Error fetching PDF from {url}: {e}")
+       continue
 
-    for pageNum in xrange(pdfFile.getNumPages()):
-            currentPage = pdfFile.getPage(pageNum)
-            writer.addPage(currentPage)
+   pdf_file = BytesIO(response.content)
+   pdf_reader = PdfReader(pdf_file)
 
-    outputStream = open("output.pdf","wb")
-    writer.write(outputStream)
-    outputStream.close()
+   all_page_text = ""
+   for page_num in range(len(pdf_reader.pages)):
+       page = pdf_reader.pages[page_num]
+       page_text = page.extract_text()
+       all_page_text += page_text
+
+   print(f"Text from {url}:\n{all_page_text}")

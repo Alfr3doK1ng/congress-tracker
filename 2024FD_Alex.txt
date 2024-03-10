@@ -1,0 +1,62 @@
+Hon.	Sessions	Pete		P	TX17	2024	2/29/24	20024375
+Hon.	Green	Mark Dr		P	TN07	2024	2/29/24	20024572
+Hon.	Cohen	Steve		P	TN09	2024	2/28/24	20024540
+Hon.	Thanedar	Shri		P	MI13	2024	2/23/24	20024468
+Hon.	Pelosi	Nancy		P	CA11	2024	2/23/24	20024542
+Hon.	DelBene	Suzan K.		P	WA01	2024	2/21/24	20024495
+Hon.	Kean	Thomas H.	Jr.	P	NJ07	2024	2/20/24	20024509
+Hon.	Allen	Richard W.		P	GA12	2024	2/16/24	20024458
+Hon.	Miller	Max		P	OH07	2024	2/16/24	20024519
+Hon.	Dingell	Debbie		P	MI06	2024	2/15/24	20024270
+Hon.	Jackson	Jonathan		P	IL01	2024	2/15/24	20024450
+Hon.	Gottheimer	Josh		P	NJ05	2024	2/15/24	20024461
+Hon.	Peters	Scott H.		P	CA50	2024	2/15/24	20024477
+Hon.	Spartz	Victoria		P	IN05	2024	2/15/24	20024515
+Hon.	Graves	Garret		P	LA06	2024	2/15/24	20024517
+Hon.	Latta	Robert E.		P	OH05	2024	2/14/24	20024505
+Hon.	Bentz	Cliff		P	OR02	2024	2/13/24	20024492
+Hon.	Kelly	Mike		P	PA16	2024	2/13/24	20024494
+Hon.	Clark	Katherine M.		P	MA05	2024	2/12/24	20024435
+Hon.	Hern	Kevin		P	OK01	2024	2/11/24	20024481
+Hon.	Miller	Max		P	OH07	2024	2/9/24	20024472
+Hon.	Salazar	Maria Elvira		P	FL27	2024	2/8/24	20024465
+Hon.	Manning	Kathy		P	NC06	2024	2/6/24	20024436
+Hon.	Pingree	Chellie		P	ME01	2024	2/6/24	20024446
+Hon.	Foxx	Virginia		P	NC05	2024	2/5/24	20024424
+Hon.	DelBene	Suzan K.		P	WA01	2024	2/5/24	20024425
+Hon.	Burgess	Michael C.		P	TX26	2024	2/5/24	20024437
+Hon.	Keating	William R.		P	MA09	2024	2/5/24	20024445
+Hon.	Green	Mark Dr		P	TN07	2024	2/1/24	20024413
+Hon.	Wasserman Schultz	Debbie		P	FL25	2024	1/31/24	20024403
+Hon.	Yakym	Rudy	III	P	IN02	2024	1/29/24	20024392
+Hon.	Kean	Thomas H.	Jr.	P	NJ07	2024	1/26/24	20024309
+Hon.	Matsui	Doris O.		P	CA07	2024	1/26/24	20024369
+Hon.	Miller	Max		P	OH07	2024	1/26/24	20024380
+Hon.	Sessions	Pete		P	TX17	2024	1/24/24	20024212
+Hon.	Moore	Blake		P	UT01	2024	1/24/24	20024354
+Hon.	Moskowitz	Jared		P	FL23	2024	1/22/24	20024286
+Hon.	Peters	Scott H.		P	CA50	2024	1/22/24	20024316
+Hon.	DelBene	Suzan K.		P	WA01	2024	1/22/24	20024317
+Hon.	Burgess	Michael C.		P	TX26	2024	1/22/24	20024330
+Hon.	Yakym	Rudy	III	P	IN02	2024	1/22/24	20024353
+Hon.	Chu	Judy		P	CA28	2024	1/21/24	20024347
+Hon.	Larsen	Rick		P	WA02	2024	1/19/24	20024339
+Hon.	Green	Mark Dr		P	TN07	2024	1/17/24	20024062
+Hon.	Evans	Dwight		P	PA03	2024	1/17/24	20024324
+Hon.	Keating	William R.		P	MA09	2024	1/16/24	20023767
+Hon.	Casten	Sean		P	IL06	2024	1/16/24	20023805
+Hon.	Hern	Kevin		P	OK01	2024	1/13/24	20024305
+Hon.	Manning	Kathy		P	NC06	2024	1/12/24	20024231
+Hon.	Jackson	Jonathan		P	IL01	2024	1/12/24	20024253
+Hon.	Salazar	Maria Elvira		P	FL27	2024	1/12/24	20024296
+Hon.	Kelly	Mike		P	PA16	2024	1/12/24	20024300
+Hon.	Allen	Richard W.		P	GA12	2024	1/11/24	20024277
+Hon.	Hill	James French		P	AR02	2024	1/10/24	20024215
+Hon.	Collins	Michael A.		P	GA10	2024	1/9/24	20024275
+Hon.	Burgess	Michael C.		P	TX26	2024	1/8/24	20024265
+Hon.	Doggett	Lloyd		P	TX37	2024	1/8/24	20024268
+Hon.	Gottheimer	Josh		P	NJ05	2024	1/7/24	20024248
+Hon.	Cohen	Steve		P	TN09	2024	1/4/24	20024188
+Hon.	Foxx	Virginia		P	NC05	2024	1/4/24	20024230
+Hon.	Lee	Laurel Mrs		P	FL15	2024	1/4/24	20024249
+Hon.	Blumenauer	Earl		P	OR03	2024	1/4/24	20024254

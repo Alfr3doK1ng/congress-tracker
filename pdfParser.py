@@ -7,8 +7,8 @@ from PyPDF2 import PdfReader
 from multiprocessing import Pool, freeze_support
 import re
 
-# 
-def extract_text_from_pdf(url):
+# Extracts text from the pdf using PyPDF2
+def pdfExtractor(url):
    try:
        response = requests.get(url)
        response.raise_for_status()
@@ -27,6 +27,7 @@ def extract_text_from_pdf(url):
 
    return all_page_text
 
+# Main method declared so that multithread doesn't open threads recursively
 def main():
     filename = "2024FD_Alex.txt"
     docID = []
@@ -49,6 +50,7 @@ def main():
 
 urls = main()
 
+# Runs pdfExtractor with multiple threads to improve runtime
 def multithread():   
     pdfData = []
 
@@ -56,7 +58,7 @@ def multithread():
         freeze_support()
 
         with Pool() as pool:
-            results = pool.map(extract_text_from_pdf, urls)
+            results = pool.map(pdfExtractor, urls)
 
         for url, text in zip(urls, results):
             if text:
@@ -66,8 +68,10 @@ def multithread():
 
     return pdfData
 
+# Initializes unparsed data to the result of multithread method 
 unparsedData = multithread()
 
+# Initializes dictionary with columns needed
 parsedData = {
     "Name" : [],
     "Date" : [],
@@ -76,17 +80,20 @@ parsedData = {
     "Amount": []
 }
 
-# Data to gather:
-# - Politician name
-# - Date
+# TODO: Data to gather:
+# - Politician name (Complete)
+# - Date 
 # - Report date
 # - Stock symbol
-# - Amount
+# - Amount (Partially complete)
 
+# Iterates through each item in the unparsed data
 for item in unparsedData:
     lines = item.splitlines()
     amtFound = False
 
+    # Iterates through each line in each item, processes name but only first amount
+    # TODO: Process date ranges & multiple transactions per report
     for line in lines:
 
         if line.startswith("Name:"):
@@ -94,6 +101,7 @@ for item in unparsedData:
             parsedData["Name"].append(currName)
 
         if "$" in line and not amtFound:
+            # Uses re library to find date ranges within a line, since location of date range varies
             match = re.search(r"\$\d+(?:,\d{3})*(?:\.\d+)?", line)
             if match and (match.group() != "$200"):
                 # print(match)

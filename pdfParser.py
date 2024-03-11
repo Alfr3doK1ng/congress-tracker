@@ -1,10 +1,11 @@
 from io import StringIO, BytesIO
-from urllib import *
+import urllib
 import requests
-from numpy import *
-from pandas import *
+import numpy as np
+import pandas as pd
 from PyPDF2 import PdfReader
 from multiprocessing import Pool, freeze_support
+import re
 
 # 
 def extract_text_from_pdf(url):
@@ -48,15 +49,57 @@ def main():
 
 urls = main()
 
-if __name__ == '__main__':
-    freeze_support()
+def multithread():   
+    pdfData = []
 
-    with Pool() as pool:
-        results = pool.map(extract_text_from_pdf, urls)
+    if __name__ == '__main__':
+        freeze_support()
 
-    for url, text in zip(urls, results):
-        if text:
-            print(f"Text from {url}:\n{text}")
-        else:
-            print(f"Failed to extract text from {url}")
-    
+        with Pool() as pool:
+            results = pool.map(extract_text_from_pdf, urls)
+
+        for url, text in zip(urls, results):
+            if text:
+                pdfData.append(text)
+            else:
+                print(f"Failed to extract text from {url}")
+
+    return pdfData
+
+unparsedData = multithread()
+
+parsedData = {
+    "Name" : [],
+    "Date" : [],
+    "Report Date" : [],
+    "Symbol": [],
+    "Amount": []
+}
+
+# Data to gather:
+# - Politician name
+# - Date
+# - Report date
+# - Stock symbol
+# - Amount
+
+for item in unparsedData:
+    lines = item.splitlines()
+    amtFound = False
+
+    for line in lines:
+
+        if line.startswith("Name:"):
+            currName = line.split(":")[1].strip()
+            parsedData["Name"].append(currName)
+
+        if "$" in line and not amtFound:
+            match = re.search(r"\$\d+(?:,\d{3})*(?:\.\d+)?", line)
+            if match and (match.group() != "$200"):
+                # print(match)
+                parsedData["Amount"].append(match.group())
+                amtFound = True
+
+print(parsedData)
+
+# df = pd.DataFrame(parsedData)
